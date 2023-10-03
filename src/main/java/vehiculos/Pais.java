@@ -17,9 +17,9 @@ public class Pais {
         int a = 0;
         Pais paisTop = null;
         for (int i=0; i<Pais.listaPaises.size(); i++){
-            int e = Pais.listaPaises.get(a).cantidadVehiculos;
+            int e = Pais.listaPaises.get(i).cantidadVehiculos;
 
-            if (e > a){
+            if (a<e){
                 a = e;
                 paisTop = Pais.listaPaises.get(i);
             }
