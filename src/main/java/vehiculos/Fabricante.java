@@ -46,7 +46,7 @@ public class Fabricante {
     }
 
 
-    public Fabricante fabricaMayorVentas() {
+    public static Fabricante fabricaMayorVentas() {
         Fabricante fabricaTop = null;
         int a = 0;
 
