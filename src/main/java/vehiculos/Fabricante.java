@@ -30,11 +30,17 @@ public class Fabricante {
         this.pais = pais;
     }
 
-    public String fabricaMayorVentas(){
-        int a;
-        for (int a=0, a < fabricantes.size()-1, a++){
-
+    public String fabricaMayorVentas() {
+        Fabricante fabricaTop = null;
+        int a = 0;
+        for (int i=0; i<fabricantes.size()-1; i++){
+            int e = Fabricante.fabricantes.get(a).numeroVehi;
+            if (e > a){
+                a = e;
+                fabricaTop = Fabricante.fabricantes.get(a);
+            }
         }
+        return String.valueOf(fabricaTop);
     }
 
     public static List<Fabricante> getFabricantes() {
