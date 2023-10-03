@@ -53,7 +53,7 @@ public class Fabricante {
         for (int i=0; i<Fabricante.fabricantes.size()-1; i++){
             int e = Fabricante.fabricantes.get(i).cantidadVehiculos;
 
-            if (e > a){
+            if (a<e){
                 a = e;
                 fabricaTop = Fabricante.fabricantes.get(i);
             }
