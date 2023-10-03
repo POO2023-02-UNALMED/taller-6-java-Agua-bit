@@ -88,4 +88,8 @@ public class Vehiculo {
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
+
+    public static String vehiculosPorTipo(){
+        void;
+    }
 }
