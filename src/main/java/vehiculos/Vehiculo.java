@@ -9,7 +9,7 @@ public class Vehiculo {
     private int peso;
     private String traccion;
     private Fabricante fabricante;
-    private int CantidadVehiculos;
+    private static int CantidadVehiculos;
 
     public Vehiculo (String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso,
                      String traccion, Fabricante fabricante){
@@ -22,7 +22,7 @@ public class Vehiculo {
         this.peso = peso;
         this.traccion = traccion;
         this.fabricante = fabricante;
-        CantidadVehiculos += 1;
+        Vehiculo.CantidadVehiculos ++;
     }
 
     public String getPlaca() {
