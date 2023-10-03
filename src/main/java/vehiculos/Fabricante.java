@@ -51,7 +51,7 @@ public class Fabricante {
         int a = 0;
 
         for (int i=0; i<Fabricante.fabricantes.size()-1; i++){
-            int e = Fabricante.fabricantes.get().cantidadVehiculos;
+            int e = Fabricante.fabricantes.get(i).cantidadVehiculos;
 
             if (e > a){
                 a = e;
