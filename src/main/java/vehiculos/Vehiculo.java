@@ -92,4 +92,12 @@ public class Vehiculo {
     public static String vehiculosPorTipo(){
         void;
     }
+
+    public static int getCantidadVehiculos() {
+        return CantidadVehiculos;
+    }
+
+    public static void setCantidadVehiculos(int cantidadVehiculos) {
+        CantidadVehiculos = cantidadVehiculos;
+    }
 }
