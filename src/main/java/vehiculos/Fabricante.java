@@ -6,7 +6,7 @@ public class Fabricante {
     private String nombre;
     private Pais pais;
     private static List<Fabricante>fabricantes = new ArrayList<>();
-    private int numeroVehi;
+    private int cantidadVehiculos;
 
     public  Fabricante(String nombre, Pais pais){
         Fabricante.fabricantes.add(this);
@@ -29,20 +29,6 @@ public class Fabricante {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-
-    public String fabricaMayorVentas() {
-        Fabricante fabricaTop = null;
-        int a = 0;
-        for (int i=0; i<fabricantes.size()-1; i++){
-            int e = Fabricante.fabricantes.get(a).numeroVehi;
-            if (e > a){
-                a = e;
-                fabricaTop = Fabricante.fabricantes.get(a);
-            }
-        }
-        return String.valueOf(fabricaTop);
-    }
-
     public static List<Fabricante> getFabricantes() {
         return fabricantes;
     }
@@ -51,11 +37,31 @@ public class Fabricante {
         Fabricante.fabricantes = fabricantes;
     }
 
-    public int getNumeroVehi() {
-        return numeroVehi;
+    public int getCantidadVehiculos() {
+        return cantidadVehiculos;
     }
 
-    public void setNumeroVehi(int numeroVehi) {
-        this.numeroVehi = numeroVehi;
+    public void setCantidadVehiculos(int cantidadVehiculos) {
+        this.cantidadVehiculos = cantidadVehiculos;
     }
+
+
+    public Fabricante fabricaMayorVentas() {
+        Fabricante fabricaTop = null;
+        int a = 0;
+
+        for (int i=0; i<Fabricante.fabricantes.size(); i++){
+            int e = Fabricante.fabricantes.get(a).cantidadVehiculos;
+
+            if (e > a){
+                a = e;
+                fabricaTop = Fabricante.fabricantes.get(i);
+            }
+        }
+        return fabricaTop;
+    }
+
+
+
+
 }

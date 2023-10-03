@@ -12,7 +12,19 @@ public class Pais {
         listaPaises.add(this);
     }
 
-    public static
+    public static Pais paisMasVendedor(){
+        int a = 0;
+        Pais paisTop = null;
+        for (int i=0; i<Pais.listaPaises.size(); i++){
+            int e = Pais.listaPaises.get(a).cantidadVehiculos;
+
+            if (e > a){
+                a = e;
+                paisTop = Pais.listaPaises.get(i);
+            }
+        }
+        return paisTop;
+    }
 
     public String getNombre() {
         return nombre;
