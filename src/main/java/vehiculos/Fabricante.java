@@ -48,7 +48,7 @@ public class Fabricante {
 
 
     public static Fabricante fabricaMayorVentas() {
-        for (int i=0; i<Fabricante.fabricantes.size(); i++){
+        for (int i=0; i<Fabricante.fabricantes.size()-1; i++){
             Fabricante top1 = Fabricante.fabricantes.get(0);
             Fabricante top2 = Fabricante.fabricantes.get(i+1);
             if (top1.getCantidadVehiculos()< top2.getCantidadVehiculos()){

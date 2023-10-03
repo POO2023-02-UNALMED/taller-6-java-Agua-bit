@@ -16,7 +16,7 @@ public class Pais {
 
     public static Pais paisMasVendedor(){
 
-        for (int i=0; i<Pais.listaPaises.size(); i++){
+        for (int i=0; i<Pais.listaPaises.size()-1; i++){
             Pais top1 = Pais.listaPaises.get(0);
             Pais top2 = Pais.listaPaises.get(i+1);
 
