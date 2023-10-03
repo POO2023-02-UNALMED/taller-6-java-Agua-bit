@@ -5,7 +5,7 @@ import java.util.List;
 public class Fabricante {
     private String nombre;
     private Pais pais;
-    private static List<Fabricante>fabricantes = new ArrayList<>();
+    private static List<Fabricante>fabricantes = new ArrayList<Fabricante>();
     private int cantidadVehiculos;
 
     public  Fabricante(String nombre, Pais pais){
