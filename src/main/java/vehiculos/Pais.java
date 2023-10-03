@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 public class Pais {
     private String nombre;
-    private int cantidadVehiculos;
+    private int cantidadPaises;
+    private static Pais top;
     private static List<Pais>listaPaises = new ArrayList<Pais>();
 
     public Pais(String nombre){
@@ -14,17 +15,19 @@ public class Pais {
     }
 
     public static Pais paisMasVendedor(){
-        int a = 0;
-        Pais paisTop = null;
-        for (int i=0; i<Pais.listaPaises.size(); i++){
-            int e = Pais.listaPaises.get(i).cantidadVehiculos;
 
-            if (a<e){
-                a = e;
-                paisTop = Pais.listaPaises.get(i);
+        for (int i=0; i<Pais.listaPaises.size(); i++){
+            Pais top1 = Pais.listaPaises.get(0);
+            Pais top2 = Pais.listaPaises.get(i+1);
+
+            if (top1.getCantidadPaises()< top2.getCantidadPaises()){
+                top = top2;
+            }
+            else{
+                top = top1;
             }
         }
-        return paisTop;
+        return top;
     }
 
     public String getNombre() {
@@ -37,5 +40,13 @@ public class Pais {
 
     public static List<Pais> getListaPaises() {
         return listaPaises;
+    }
+
+    public int getCantidadPaises() {
+        return cantidadPaises;
+    }
+
+    public void setCantidadPaises(int cantidadPaises) {
+        this.cantidadPaises = cantidadPaises;
     }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 public class Fabricante {
     private String nombre;
     private Pais pais;
+    private static Fabricante top;
     private static List<Fabricante>fabricantes = new ArrayList<Fabricante>();
     private int cantidadVehiculos;
 
@@ -47,18 +48,18 @@ public class Fabricante {
 
 
     public static Fabricante fabricaMayorVentas() {
-        Fabricante fabricaTop = null;
-        int a = 0;
-
-        for (int i=0; i<Fabricante.fabricantes.size()-1; i++){
-            int e = Fabricante.fabricantes.get(i).cantidadVehiculos;
-
-            if (a<e){
-                a = e;
-                fabricaTop = Fabricante.fabricantes.get(i);
+        for (int i=0; i<Fabricante.fabricantes.size(); i++){
+            Fabricante top1 = Fabricante.fabricantes.get(0);
+            Fabricante top2 = Fabricante.fabricantes.get(i+1);
+            if (top1.getCantidadVehiculos()< top2.getCantidadVehiculos()){
+                top = top2;
+            }
+            else{
+                top = top1;
             }
         }
-        return fabricaTop;
+        return top;
+
     }
 
 
